@@ -17,10 +17,17 @@ import com.sc1_solo.carehub.R
 class CardViewDataAdapter: RecyclerView.Adapter<CardViewDataAdapter.ViewHolder>() {
     private val hospitalName = arrayOf(
         "RSUD Prof. Dr. Margono Soekarjo",
-        "Rumah Sakit Umum Wishnu Husada")
+        "Rumah Sakit Umum Wishnu Husada",
+        "Klinik Brayan Sehat (KBS)",
+            "Rumah Sakit Islam Purwokerto",
+            "RS Ananda Purwokerto"
+    )
     private val avgOpenhour = arrayOf(
-        "Buka 24 Jam",
-        "Buka 24 Jam"
+            "Buka 24 Jam",
+            "Buka 24 Jam",
+            "8AM–8:45PM",
+            "Buka 24 Jam",
+            "Buka 24 Jam"
     )
     private val openHour = arrayOf(
         "Senin  : Buka 24 Jam\n" +
@@ -37,34 +44,78 @@ class CardViewDataAdapter: RecyclerView.Adapter<CardViewDataAdapter.ViewHolder>(
                 "Jumat  : Buka 24 Jam\n" +
                 "Sabtu  : Buka 24 Jam\n" +
                 "Minggu : Buka 24 Jam",
+        "Senin  : 8AM–8:45PM\n" +
+                 "Selasa : 8AM–8:45PM\n" +
+                 "Rabu   : 8AM–8:45PM\n" +
+                 "Kamis  : 8AM–8:45PM\n" +
+                 "Jumat  : 8AM–8:45PM\n" +
+                 "Sabtu  : 8AM–1PM\n" +
+                 "Minggu : Tutup",
+            "Senin  : Buka 24 Jam\n" +
+                    "Selasa : Buka 24 Jam\n" +
+                    "Rabu   : Buka 24 Jam\n" +
+                    "Kamis  : Buka 24 Jam\n" +
+                    "Jumat  : Buka 24 Jam\n" +
+                    "Sabtu  : Buka 24 Jam\n" +
+                    "Minggu : Buka 24 Jam",
+            "Senin  : Buka 24 Jam\n" +
+                    "Selasa : Buka 24 Jam\n" +
+                    "Rabu   : Buka 24 Jam\n" +
+                    "Kamis  : Buka 24 Jam\n" +
+                    "Jumat  : Buka 24 Jam\n" +
+                    "Sabtu  : Buka 24 Jam\n" +
+                    "Minggu : Buka 24 Jam",
     )
     private val address = arrayOf(
         "Jl. Dr. Gumbreg No.1, Kebontebu, Berkoh, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53146",
-        "JL. Raya Notog, No. 200 RT. 03 RW. 01, Salamudin, Notog, Kec. Patikraja, Kabupaten Banyumas, Jawa Tengah 53176"
+        "JL. Raya Notog, No. 200 RT. 03 RW. 01, Salamudin, Notog, Kec. Patikraja, Kabupaten Banyumas, Jawa Tengah 53176",
+            "Karangbawang, Purwokerto Kulon, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53141",
+            "Jl. Mashuri No.39, Kalibogor, Rejasari, Kec. Purwokerto Bar., Kabupaten Banyumas, Jawa Tengah 53134",
+            "Jl. Pemuda No.30, Kober, Kec. Purwokerto Bar., Kabupaten Banyumas, Jawa Tengah 53132"
     )
     private val phone = arrayOf(
         "+62281632708",
-        "+622816844850"
+        "+622816844850",
+            "+622817772941",
+            "+62281630019",
+            "+62281636417"
     )
     private val email = arrayOf(
         "email@admin.com",
-        "email@admin.com"
+        "email@admin.com",
+            "email@admin.com",
+            "email@admin.com",
+            "email@admin.com"
+
     )
     private val website = arrayOf(
         "http://rsmargono.jatengprov.go.id/",
-        "-"
+        "-",
+            "https://klinik-brayan-sehat-kbs.business.site/",
+            "http://rsipurwokerto.co.id/",
+            "https://rsananda.co.id/"
+
     )
     private val photo = arrayOf(
         "https://www.rsmargono.go.id/assets/public/images/building/building_1.jpg",
-        "https://static.guesehat.com/static/directories_thumb/21170_Rumah_Sakit_Wisnu_Husada.jpg"
+        "https://static.guesehat.com/static/directories_thumb/21170_Rumah_Sakit_Wisnu_Husada.jpg",
+            "https://i.ibb.co/hyZJPYv/klinik-brayan-sehat.jpg",
+            "https://www.garnesia.com/images/vendor/v4870.jpg",
+            "https://3.bp.blogspot.com/-5pQoDyu1L54/WODy61EhBvI/AAAAAAAAFTk/mp0n0g-89LMN7DZrMW7p40gebjf2DkgPACLcB/s1600/rumahsakitanandapurwokerto.jpg"
     )
     private val lat = arrayOf(
         "-7.436388552290917",
-        "-7.482656144713493"
+        "-7.482656144713493",
+            "-7.431008860733857",
+            "-7.418509565324121",
+            "-7.413848268070681"
     )
     private val lang = arrayOf(
         "109.26749203989951",
-        "109.21422276627231"
+        "109.21422276627231",
+            "109.24412046930946",
+            "109.21265512596834",
+            "109.22414496305355"
     )
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {

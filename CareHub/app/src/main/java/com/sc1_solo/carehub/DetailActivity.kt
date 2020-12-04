@@ -17,6 +17,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         val intent: Intent = intent
         val urlphoto: String = intent.getStringExtra("PHOTO").toString()
         name_content.text = intent.getStringExtra("NAME")

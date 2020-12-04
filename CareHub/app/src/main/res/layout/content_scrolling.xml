@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DetailActivity"
     tools:showIn="@layout/activity_detail">
@@ -21,108 +21,113 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:textAppearance="?attr/textAppearanceHeadline5"
-            android:text="@string/content_name" />
+            android:text="@string/content_name"
+            android:textAppearance="?attr/textAppearanceHeadline5" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/address_card"
-            app:cardPreventCornerOverlap="false"
-            android:backgroundTint="@color/cardBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard"
-            android:layout_marginVertical="8dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/address"
-                        android:layout_marginTop="8dp"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
-                        />
-
-                    <TextView
-                        android:id="@+id/address_content"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="16dp"
-                        android:textAppearance="?attr/textAppearanceListItem"
-                        android:text="@string/address_content"/>
-                </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/workhours_card"
-            app:cardPreventCornerOverlap="false"
+            android:layout_marginVertical="8dp"
             android:backgroundTint="@color/cardBackground"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard"
-            android:layout_marginVertical="16dp">
+            app:cardPreventCornerOverlap="false"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/open_times"
                     android:layout_marginTop="8dp"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
+                    android:text="@string/address"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/address_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:text="@string/address_content"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/workhours_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:backgroundTint="@color/cardBackground"
+            app:cardPreventCornerOverlap="false"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/open_times"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
 
                 <TextView
                     android:id="@+id/workhours_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
-                    android:textAppearance="?attr/textAppearanceListItem"
-                    android:text="@string/workhours_content"/>
+                    android:text="@string/workhours_content"
+                    android:textAppearance="?attr/textAppearanceListItem" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/contact_card"
-            android:backgroundTint="@color/cardBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard"
-            android:layout_marginVertical="16dp">
+            android:layout_marginVertical="16dp"
+            android:backgroundTint="@color/cardBackground"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.OneUICard">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/contact"
                     android:layout_marginTop="8dp"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
+                    android:text="@string/contact"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_local_phone_24"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_local_phone_24" />
+
                     <TextView
                         android:id="@+id/contact_phone_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:textAppearance="?attr/textAppearanceListItem"
-                        android:text="@string/contact_phone_content"/>
+                        android:text="@string/contact_phone_content"
+                        android:textAppearance="?attr/textAppearanceListItem" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -130,18 +135,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_open_in_browser_24"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_open_in_browser_24" />
+
                     <TextView
                         android:id="@+id/contact_web_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:textAppearance="?attr/textAppearanceListItem"
-                        android:text="@string/contact_web_content"/>
+                        android:text="@string/contact_web_content"
+                        android:textAppearance="?attr/textAppearanceListItem" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -149,18 +156,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_email_24"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_baseline_email_24" />
+
                     <TextView
                         android:id="@+id/contact_email_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="16dp"
-                        android:textAppearance="?attr/textAppearanceListItem"
-                        android:text="@string/contact_email_content"/>
+                        android:text="@string/contact_email_content"
+                        android:textAppearance="?attr/textAppearanceListItem" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
