@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -21,13 +22,18 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityAccountBinding
     private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var settingModel: SettingModel
+    private lateinit var mSettingPreference: SettingPreference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.title = "Account"
+        supportActionBar!!.title = "Account"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding = ActivityAccountBinding.inflate(layoutInflater)
+        binding.act = this
         setContentView(binding.root)
         auth = Firebase.auth
+        mSettingPreference = SettingPreference(this)
+        showExistingPreference()
         val currentUser = auth.currentUser
         if (currentUser == null) {
             val intent = Intent(this@AccountActivity, SignInActivity::class.java)
@@ -93,6 +99,9 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnEmailVerify -> {
                 sendEmailVerification()
             }
+            R.id.btn_save -> {
+                openSetting()
+            }
         }
     }
     private fun sendEmailVerification() {
@@ -124,4 +133,35 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+    fun openSetting(){
+        val intent = Intent(this@AccountActivity, SettingPreferenceActivity::class.java)
+        startActivityForResult(intent, REQUEST_CODE)
+    }
+    companion object {
+        private const val REQUEST_CODE = 100
+    }
+    private fun showExistingPreference() {
+        settingModel = mSettingPreference.getSetting()
+        populateView(settingModel)
+    }
+    private fun populateView(settingModel: SettingModel) {
+        if (settingModel.isDarkTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            delegate.applyDayNight()
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            delegate.applyDayNight()
+        }
+        binding.settingModel = settingModel
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == SettingPreferenceActivity.RESULT_CODE) {
+                showExistingPreference()
+            }
+        }
+    }
+
 }

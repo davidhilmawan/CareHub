@@ -20,10 +20,16 @@
     <string name="content_name">content name</string>
     <string name="title_activity_maps">Map</string>
     <string name="account">Account</string>
-    <string name="phone_number_auth">Phone Number Auth</string>
+    <string name="phone_number_auth">Phone Number Authorization</string>
     <string name="phone_number">Phone Number</string>
     <string name="verification_code">Verification Code</string>
     <string name="resend_code">Resend Code</string>
     <string name="_62">+62</string>
     <string name="continue_">Continue</string>
+    <string name="setting">Setting</string>
+    <string name="dark_theme">dark theme</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="save">save</string>
+    <string name="setting_page">Setting</string>
 </resources>
