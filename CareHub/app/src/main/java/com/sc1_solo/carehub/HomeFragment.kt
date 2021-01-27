@@ -27,4 +27,5 @@ class HomeFragment : Fragment() {
             adapter = CardViewDataAdapter()
         }
     }
+
 }

@@ -30,41 +30,13 @@ class CardViewDataAdapter: RecyclerView.Adapter<CardViewDataAdapter.ViewHolder>(
             "Buka 24 Jam"
     )
     private val openHour = arrayOf(
-        "Senin  : Buka 24 Jam\n" +
-                "Selasa : Buka 24 Jam\n" +
-                "Rabu   : Buka 24 Jam\n" +
-                "Kamis  : Buka 24 Jam\n" +
-                "Jumat  : Buka 24 Jam\n" +
-                "Sabtu  : Buka 24 Jam\n" +
-                "Minggu : Buka 24 Jam",
-        "Senin  : Buka 24 Jam\n" +
-                "Selasa : Buka 24 Jam\n" +
-                "Rabu   : Buka 24 Jam\n" +
-                "Kamis  : Buka 24 Jam\n" +
-                "Jumat  : Buka 24 Jam\n" +
-                "Sabtu  : Buka 24 Jam\n" +
-                "Minggu : Buka 24 Jam",
-        "Senin  : 8AM–8:45PM\n" +
-                 "Selasa : 8AM–8:45PM\n" +
-                 "Rabu   : 8AM–8:45PM\n" +
-                 "Kamis  : 8AM–8:45PM\n" +
-                 "Jumat  : 8AM–8:45PM\n" +
+        "Senin - Minggu  : Buka 24 Jam\n",
+        "Senin - Minggu  : Buka 24 Jam\n",
+        "Senin - Jumat : 8AM–8:45PM\n"+
                  "Sabtu  : 8AM–1PM\n" +
                  "Minggu : Tutup",
-            "Senin  : Buka 24 Jam\n" +
-                    "Selasa : Buka 24 Jam\n" +
-                    "Rabu   : Buka 24 Jam\n" +
-                    "Kamis  : Buka 24 Jam\n" +
-                    "Jumat  : Buka 24 Jam\n" +
-                    "Sabtu  : Buka 24 Jam\n" +
-                    "Minggu : Buka 24 Jam",
-            "Senin  : Buka 24 Jam\n" +
-                    "Selasa : Buka 24 Jam\n" +
-                    "Rabu   : Buka 24 Jam\n" +
-                    "Kamis  : Buka 24 Jam\n" +
-                    "Jumat  : Buka 24 Jam\n" +
-                    "Sabtu  : Buka 24 Jam\n" +
-                    "Minggu : Buka 24 Jam",
+        "Senin - Minggu  : Buka 24 Jam\n",
+        "Senin - Minggu  : Buka 24 Jam\n",
     )
     private val address = arrayOf(
         "Jl. Dr. Gumbreg No.1, Kebontebu, Berkoh, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53146",

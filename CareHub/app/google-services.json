@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "27125501608",
+    "project_id": "carehub-bb2e4",
+    "storage_bucket": "carehub-bb2e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27125501608:android:a38a612bb3432271953c9d",
+        "android_client_info": {
+          "package_name": "com.sc1_solo.carehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27125501608-gdtoh7l5ge1j6g9rjb20n8hv2cvlsqir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sc1_solo.carehub",
+            "certificate_hash": "e09aeea0c1069d8873f773cfe3b3f0ac9399fbd3"
+          }
+        },
+        {
+          "client_id": "27125501608-1i0op80ktih5tqigs0tes5rsq907dn01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzJ9XsIto96hN_-bV4cI9nKXTJdR8k9cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27125501608-1i0op80ktih5tqigs0tes5rsq907dn01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

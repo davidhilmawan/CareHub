@@ -6,12 +6,6 @@
     <string name="hospital_name">hospital name</string>
     <string name="avgopenhour">open hour</string>
     <string name="title_activity_detail">DetailActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="address_content">address content</string>
@@ -25,4 +19,11 @@
     <string name="address">Address</string>
     <string name="content_name">content name</string>
     <string name="title_activity_maps">Map</string>
+    <string name="account">Account</string>
+    <string name="phone_number_auth">Phone Number Auth</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="_62">+62</string>
+    <string name="continue_">Continue</string>
 </resources>
