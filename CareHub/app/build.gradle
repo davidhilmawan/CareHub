@@ -8,6 +8,15 @@ plugins {
 android {
     compileSdkVersion 29
 
+    signingConfigs {
+        release {
+            storeFile file("E:/David/Kuliah/sem 5/ppb/SOLO TEAM FTW/SOLO-SC1/carehubkey.jks")
+            storePassword "hilmawan"
+            keyAlias "carehub"
+            keyPassword "hilmawan"
+        }
+    }
+
     defaultConfig {
         applicationId "com.sc1_solo.carehub"
         minSdkVersion 21
@@ -25,6 +34,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
