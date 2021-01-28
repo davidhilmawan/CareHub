@@ -3,10 +3,10 @@ package com.sc1_solo.carehub
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.FontsContract.Columns.RESULT_CODE
-import android.text.TextUtils
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.sc1_solo.carehub.data.SettingModel
 import com.sc1_solo.carehub.databinding.ActivitySettingPreferenceBinding
 
 class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,7 +22,18 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         settingModel = mSettingPreference.getSetting()
         showPreferenceInForm()
         supportActionBar?.title = getString(R.string.setting_page)
+        supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onContextItemSelected(item)
     }
 
     override fun onClick(p0: View?) {
@@ -50,5 +61,9 @@ class SettingPreferenceActivity : AppCompatActivity(), View.OnClickListener {
         settingModel.isDarkTheme = isLoveMU
         settingPreference.setSetting(settingModel)
         Toast.makeText(this, "Data tersimpan", Toast.LENGTH_SHORT).show()
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

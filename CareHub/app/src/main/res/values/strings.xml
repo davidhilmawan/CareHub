@@ -32,4 +32,8 @@
     <string name="no">no</string>
     <string name="save">save</string>
     <string name="setting_page">Setting</string>
+    <string name="title">title</string>
+    <string name="submit">submit</string>
+    <string name="description">description</string>
+    <string name="delete">Delete</string>
 </resources>

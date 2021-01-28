@@ -1,11 +1,11 @@
 package com.sc1_solo.carehub
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
@@ -16,7 +16,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.sc1_solo.carehub.data.SettingModel
 import com.sc1_solo.carehub.databinding.ActivityAccountBinding
+import kotlinx.android.synthetic.main.activity_account.*
 
 class AccountActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
@@ -42,6 +44,7 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
         }
         binding.btnSignOut.setOnClickListener(this)
         binding.btnEmailVerify.setOnClickListener(this)
+        binding.btnAddAddress.setOnClickListener(this)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -102,7 +105,14 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_save -> {
                 openSetting()
             }
+            R.id.btnAddAddress -> {
+                openAddress()
+            }
         }
+    }
+    fun openAddress(){
+        val intent = Intent(this@AccountActivity, DashboardAddressActivity::class.java)
+        startActivityForResult(intent, REQUEST_CODE)
     }
     private fun sendEmailVerification() {
         binding.btnEmailVerify.isEnabled = false
@@ -112,12 +122,12 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
                 binding.btnEmailVerify.isEnabled = true
                 if (task.isSuccessful) {
                     Toast.makeText(baseContext,
-                        "Verification email sent to ${user.email} ",
-                        Toast.LENGTH_SHORT).show()
+                            "Verification email sent to ${user.email} ",
+                            Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(baseContext,
-                        "Failed to send verification email.",
-                        Toast.LENGTH_SHORT).show()
+                            "Failed to send verification email.",
+                            Toast.LENGTH_SHORT).show()
                 }
             }
     }
@@ -163,5 +173,8 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

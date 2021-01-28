@@ -18,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareHub">
-        <activity android:name=".SettingPreferenceActivity"></activity>
+        <activity android:name=".AddressAddUpdateActivity"></activity>
+        <activity android:name=".DashboardAddressActivity" />
+        <activity android:name=".SettingPreferenceActivity" />
         <activity android:name=".PhoneAuthActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity" />

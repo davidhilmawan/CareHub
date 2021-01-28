@@ -1,6 +1,7 @@
 package com.sc1_solo.carehub
 
 import android.content.Context
+import com.sc1_solo.carehub.data.SettingModel
 
 internal class SettingPreference(context: Context) {
     companion object {

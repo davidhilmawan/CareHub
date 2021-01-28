@@ -6,7 +6,7 @@
         <import type="android.text.TextUtils"/>
         <variable
             name="settingModel"
-            type="com.sc1_solo.carehub.SettingModel" />
+            type="com.sc1_solo.carehub.data.SettingModel" />
         <variable
             name="act"
             type="com.sc1_solo.carehub.AccountActivity" />
@@ -53,34 +53,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
+        <Button
+            android:id="@+id/btnAddAddress"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:typeface="normal"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save"
+            app:layout_constraintStart_toStartOf="@+id/btn_save"
+            app:layout_constraintTop_toBottomOf="@+id/btnEmailVerify" />
 
         <Button
             android:id="@+id/btnEmailVerify"
             style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="@{() -> act.openAddress()}"
             android:text="Verify Email"
             android:textColor="#FFFFFF"
             android:textSize="13sp"
             android:typeface="normal"
-            app:layout_constraintBottom_toTopOf="@+id/btn_save"
-            app:layout_constraintEnd_toEndOf="@+id/btn_save"
-            app:layout_constraintStart_toStartOf="@+id/btn_save" />
+            app:layout_constraintEnd_toEndOf="@+id/btnAddAddress"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnAddAddress"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserId" />
 
         <Button
             android:id="@+id/btn_save"
             style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> act.openSetting()}"
             android:text="@string/setting"
             android:textColor="#FFFFFF"
             android:textSize="13sp"
             android:typeface="normal"
-            android:onClick="@{() -> act.openSetting()}"
-            app:layout_constraintBottom_toTopOf="@+id/btnSignOut"
             app:layout_constraintEnd_toEndOf="@+id/btnSignOut"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/btnSignOut"/>
+            app:layout_constraintStart_toStartOf="@+id/btnSignOut"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddAddress" />
 
         <Button
             android:id="@+id/btnSignOut"
@@ -89,14 +104,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
             android:text="Sign Out"
             android:textColor="#FFFFFF"
             android:textSize="13sp"
             android:typeface="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

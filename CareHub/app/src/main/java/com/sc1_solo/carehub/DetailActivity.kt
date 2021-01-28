@@ -15,9 +15,6 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
         val intent: Intent = intent
         val urlphoto: String = intent.getStringExtra("PHOTO").toString()
         name_content.text = intent.getStringExtra("NAME")
@@ -30,9 +27,5 @@ class DetailActivity : AppCompatActivity() {
         contact_phone_content.text = intent.getStringExtra("PHONE")
         contact_web_content.text = intent.getStringExtra("WEBSITE")
         contact_email_content.text = intent.getStringExtra("EMAIL")
-    }
-    override fun onSupportNavigateUp(): Boolean {
-        super.onBackPressed()
-        return true
     }
 }
